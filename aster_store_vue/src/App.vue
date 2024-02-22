@@ -1,30 +1,53 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div id="wrapper">
+    <nav class="navbar is-dark">
+      <div class="navbar-brand">
+        <router-link to="/" class="navbar-item"><strong>Djackets</strong></router-link>
+
+        <a class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar-menu" @click="showMobileMenu = !showMobileMenu">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div class="navbar-menu" id="navbar-menu">
+        <div class="navbar-end">
+          <router-link to="/bricks" class="navbar-item">Bricks</router-link>
+          <router-link to="/blocks" class="navbar-item">Blocks</router-link>
+          <router-link to="/tiles" class="navbar-item">Tiles</router-link>
+          <router-link to="/rods" class="navbar-item">Rods</router-link>
+          <router-link to="/faucets" class="navbar-item">Faucets</router-link>
+          <router-link to="/lights_and_lambs" class="navbar-item">Lights_and_Lambs</router-link>
+          <router-link to="/door_handles" class="navbar-item">Door_handles</router-link>
+          <router-link to="/building_accessories" class="navbar-item">Building_accessories</router-link>
+
+          <div class="navbar-item">
+            <div class="buttons">
+              <router-link to="/log-in" class="button is-light">Log in</router-link>
+
+              <router-link to="/cart" class="button is success">
+                <span class="icon"><i class="fas fa-shopping-cart"></i></span>
+                <span>Cart</span>
+              </router-link>
+            </div>
+          </div>          
+        </div>
+      </div>
+    </nav>
+
+    <section class="section">
+    </section>
+      <router-view/>
+
+    <footer class="footer">
+      <p class="has-text-centered">Copyright (d) 2024</p>
+    </footer>
+    
+  </div>
 </template>
 
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
+@import '../node_modules/bulma';
 </style>
