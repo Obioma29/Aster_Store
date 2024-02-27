@@ -39,7 +39,7 @@ export default {
     data() {
         return {
             product: {},
-            quantity: 1
+            quantity: 1,
         }
     },
     mounted() {
