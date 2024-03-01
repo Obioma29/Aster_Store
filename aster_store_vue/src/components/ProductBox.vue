@@ -2,7 +2,7 @@
     <div class="column is-3">
         <div class="box">
             <figure class="image mb-4">
-                <img :src="product.get_thumbnail">
+                <img v-bind:src="product.get_thumbnail">
             </figure>
 
             <h3 class="is-size-4">{{ product.name }}</h3>
@@ -16,11 +16,12 @@
 
 <script>
 export default {
-    name: 'ProductBox',
+    name: 'ProductBox.vue',
     props: {
         product: Object
     }
 }
+
 </script>
 
 <style scoped>
